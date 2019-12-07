@@ -10,8 +10,10 @@ namespace start_application
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("\n\t Start Application...");
-
+            Console.WriteLine("\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+            Console.WriteLine("\t Applications Startup...");
+            Console.WriteLine(" Copyright 2019. Author: Charles A.");            
+            Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
             RunApp r = new RunApp();
             r.Run();
             Console.Write("\n\n\t Press any key to exit: ");

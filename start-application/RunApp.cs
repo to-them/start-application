@@ -38,14 +38,14 @@ namespace start_application
             //Check Directory
             if (!Directory.Exists(getFolderPath) || getFolderPath.Length < 1)
             {
-                Console.WriteLine("\n Folder not exist!");
+                Console.WriteLine("\n App folder does not exist! We will create one for you to use.");
 
                 //Create Directory
                 string ProjectName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
                 string ProjectVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
                 getFolderPath = @"C:\Temp\" + ProjectName;
                 Directory.CreateDirectory(getFolderPath);
-                Console.WriteLine("\n " + getFolderPath + " Created!");
+                Console.WriteLine("\n App Folder <" + getFolderPath + "> has been created!");
                 Console.WriteLine(" Mount this folder at desire location. Then open App.config and enter the path in AppDataFolder value.");
 
                 //Create Temp Apps File
@@ -53,7 +53,7 @@ namespace start_application
                 doc.LoadXml(tempXml);
                 getAppsFile = getFolderPath + "\\AppsFile.xml";
                 doc.Save(getAppsFile);
-                Console.WriteLine("\n " + getAppsFile + " Created!");
+                Console.WriteLine("\n Apps File <" + getAppsFile + "> has been created!");
                 Console.WriteLine(" Mount the file at desire location. Then open App.config and enter the path in AppsFile value.");
 
             }
@@ -90,9 +90,9 @@ namespace start_application
                     AppLoc = dr["apploc"].ToString();
 
                     if (cmd.StartProcess(AppLoc, getFolderPath))
-                        Console.WriteLine(" " + AppName + " | Started!");
+                        Console.WriteLine(" " + ID + " | " + AppName + " | Started!");
                     else
-                        Console.WriteLine(" " + AppName + " | Failed!");
+                        Console.WriteLine(" " + ID + " | " + AppName + " | Failed!");
                 }
 
                 //string[] arr = { "http:\\google.com", "http:\\msn.com", @"C:\Users\charl\Documents\Backyard\To Association\Storage Shed.pdf" };
