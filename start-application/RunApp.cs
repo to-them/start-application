@@ -95,7 +95,7 @@ namespace start_application
                         Console.WriteLine(" " + ID + " | " + AppName + " | Failed!");
                 }
 
-                //string[] arr = { "http:\\google.com", "http:\\msn.com", @"C:\Users\charl\Documents\Backyard\To Association\Storage Shed.pdf" };
+                //string[] arr = { "http:\\google.com", "http:\\msn.com", @"C:\Documents\Backyard\Association\StorageShed.pdf" };
                 //getFolderPath = @"C:\Temp\StartApp";
                 //cmdString = @"http:\\google.com";
                 ////cmd.ExecuteSync(cmdString, getFolderPath);
